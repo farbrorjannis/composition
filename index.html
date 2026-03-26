@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composition Expert - Akvarellskiss</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Cropper.js for professional cropping -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h1>Composition Expert</h1>
+        <p>Refine your reference photo for better watercolor painting.</p>
+    </header>
+
+    <div class="upload-section">
+        <input type="file" id="imageInput" accept="image/*" hidden>
+        <label for="imageInput" class="btn-primary">Upload Image</label>
+    </div>
+
+    <div class="editor-layout">
+        <div class="canvas-area">
+            <img id="imageToEdit" src="" style="display:none;">
+        </div>
+
+        <aside class="controls">
+            <section class="control-group">
+                <h3>Paper Format</h3>
+                <select id="aspectRatio">
+                    <option value="NaN">Free Crop</option>
+                    <option value="1">Square (1:1)</option>
+                    <option value="0.707">A4 / A-series (Vertical)</option>
+                    <option value="1.414">A4 / A-series (Horizontal)</option>
+                    <option value="0.66">Standard (2:3)</option>
+                    <option value="1.5">Standard (3:2)</option>
+                </select>
+            </section>
+
+            <section class="control-group">
+                <h3>Visual Aids</h3>
+                <div class="btn-grid">
+                    <button class="btn-toggle" id="btnGrayscale">Grayscale</button>
+                    <button class="btn-toggle" id="btnMirror">Mirror</button>
+                    <button class="btn-toggle" id="btnSimplify">Simplify (Posterize)</button>
+                </div>
+            </section>
+
+            <div class="action-buttons">
+                <button id="downloadBtn" class="btn-success">Download Composition</button>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com"></script>
+<script src="script.js"></script>
+</body>
+</html>
